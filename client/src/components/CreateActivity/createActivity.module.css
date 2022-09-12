@@ -1,0 +1,302 @@
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./1580.jpg);
+    height: 937px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform .5s ease-in-out;
+    color: white
+}
+
+.buton{
+    position: absolute;
+    top : 100px;
+    left: 230px;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(75, 81, 75, 0.579);
+    color: white;
+    border: 1.3px solid rgba(142, 178, 80, 0.223);
+    cursor: pointer;
+}
+
+
+
+
+.BoxGral{
+    transition: all 0.5s ease-in-out; 
+    display: flex;
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.771);
+    height:91.8%;
+    flex-direction: column;
+    border: 2px solid rgba(142, 178, 80, 0.223);
+    transition: all 0.5s ease-in-out;
+}
+
+.create{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 10%;
+    border-bottom: 1px rgba(179, 179, 179, 0.486) solid;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.alimentacion{
+    height: 100%;
+}
+
+.form{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.place{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    min-height: 100px;
+    width: 400px;
+    
+}
+
+.name{
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+}
+
+
+
+.nameActivity{
+    display: flex;
+    width: 200px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 7px;
+    border-radius: 9px;
+    border: 1px black solid;
+    background-color: rgba(75, 81, 75, 0.579);
+    color: white;
+    
+   
+}
+
+.nameActivity::placeholder{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.pName{
+ height: 30px;
+ margin-bottom: 0px;
+}
+
+.boxDifficulty{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    width: 100%;
+    min-height: 100px;
+   
+}
+
+.divDifficulty{
+    margin-bottom: 10px;
+}
+
+.difficulty{
+    
+    margin-bottom: 4px;
+    
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.selectDif{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    flex-direction: column;
+    
+    
+}
+
+.inputDif{
+    height: 27px;
+    background-color: rgba(75, 81, 75, 0.579);
+    border-radius: 2px;
+    color: rgb(118, 118, 118);
+    border: 1px black solid;
+    cursor: pointer;
+
+}
+
+.minutos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 20px;
+    width: 200px;
+    margin-left: 35.8%;
+    margin-top: 5px;
+    border-radius: 9px;
+    background-color: rgba(75, 81, 75, 0.579);
+    border: 1px black solid;    
+    color: white;
+    
+}
+
+
+
+.minutos::placeholder{
+    text-align: center;
+    
+}
+
+.nameTemp{
+    margin-bottom: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.backgroundDif{
+    background-color: rgba(75, 81, 75, 0.579);
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    margin-left: 18%;
+    border-radius: 9px;
+    height: 30px;
+    align-items: center;
+
+}
+
+.margin{
+    margin-left :22px;
+    margin-right: 22px;
+    color: gray;
+    cursor: pointer;
+}
+
+.boxDifficultyy{
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+    height: 140px;
+
+}
+
+.boxDifficultyyy{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    width: 100%;
+}
+
+.boton{
+    position: absolute;
+    top: 155px;
+    left: 670px;
+    background-color: rgba(75, 81, 75, 0.579);
+    color: white;
+    height: 30px;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    
+}
+
+.boton:hover{
+    
+    transform: scale(1.1);
+}
+
+.divCountries{
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+     
+}
+
+
+
+.select{
+    width: 40%;
+  
+    background-color: rgba(75, 81, 75, 0.579);
+    border: 1px black solid;
+    text-align: center;
+    height: 25px;
+    color: gray;
+    cursor: pointer;
+    
+}
+
+.boxCountries{
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-height: 100%;
+    justify-content: center;
+    
+}
+
+.centerOption{
+    color: rgb(0, 0, 0);
+    background-color: rgb(252, 254, 252);
+    text-align: center;
+    
+}
+
+.tamañoPaises{
+    width: 13%;
+    max-height: 60px;
+    border: 1px white solid;
+    /* background-color:rgba(75, 81, 75, 0.579); ;  */ 
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; 
+}
+
+.tamañoPaises:hover{
+    background-color: rgb(255, 16, 16);
+    transform:scale(1.05);
+}
+
+.barrita{
+
+    height: 40px;
+    border-bottom: 1px rgba(255, 255, 255, 0.245) solid;
+}
+
+
+
+.error{
+    color: red;
+}
+

@@ -1,0 +1,69 @@
+body { 
+    margin: 0em;
+   
+  }
+  
+.country{
+    display: inline-block;
+   
+    width: 18.75rem;
+    height: 22rem;
+    margin:0rem ;
+    max-height: 22rem;
+    overflow: hidden;
+    background-color: #f7f7f75a;
+    border-radius: 1.2rem;
+    padding: 1rem;
+    position: relative;
+    margin-bottom: 3rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: rgb(4, 4, 4); font-family: arial; text-decoration: none;
+    font-weight: 600;
+    
+}
+
+.country:hover{
+    color: rgb(0, 0, 0); font-family: arial; text-decoration: none;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+
+}
+
+.imgCountry{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 3.3rem;
+    top: 1.1rem;
+    
+    
+}
+
+.name{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    text-decoration: none;
+    border-bottom: 1px black solid;
+}
+
+.continente{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 1rem;
+    font-size: 1.3rem;
+}
+
+.poblacion{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 1.5rem;
+    font-size: 1.1rem;
+}

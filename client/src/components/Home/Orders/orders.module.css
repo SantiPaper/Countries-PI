@@ -1,0 +1,55 @@
+.divFlex{
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+    /* position: absolute;
+    left: 1050px; */
+    margin-left: 50px;
+    
+    
+    
+    
+}
+
+.select1{
+    width: 150px;
+    margin-right:10px ;
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    color: white;
+   
+    text-align: center;
+    
+}
+
+.select1::focus{
+    border: 1px solid black;
+    
+}
+
+.radius{
+   border-radius: 9px;
+   background-color: rgb(35, 35, 35);
+}
+
+.hidden_option{
+    text-align: center;
+}
+
+
+
+.select2{
+    width: 150px;
+    margin-right:10px ;
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    
+    text-align: center;
+    
+}
+
+.select2::focus{
+    border: 1px solid black;
+    
+}

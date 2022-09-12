@@ -1,0 +1,55 @@
+.ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 35px;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb (145, 157, 168);
+    color: rgb(145, 143, 143);
+    width: 3rem;
+    cursor: pointer;
+    transition: all 0.25s;
+    height: 50%;
+    border: 0px;
+    border-left: 0.5px rgba(119, 118, 118, 0.232) solid;
+    border-right: 0.5px rgba(109, 107, 107, 0.263) solid;
+    font-size: 16px;
+    background-color: rgb(9, 9, 9);
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.button:hover{
+    transform: scale(1.2);
+    
+}
+
+.button:focus{
+    color: white;
+    transform: scale(1.2);
+      
+      
+}
+
+.bordeP{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(9, 9, 9);
+    width: 1250px;
+    border-radius: 20px;
+    height: 30px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
