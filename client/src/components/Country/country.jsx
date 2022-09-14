@@ -9,8 +9,6 @@ export default function Country({ idApi, img , name , continent, population}) {
         <h3 className={s.name}>{name}</h3>
         <p className={s.continente}> Continente : {continent}</p>
         <p className={s.poblacion}>Poblacion : {population}</p>
-        {/* <button className="botton">Detalles</button> */}
-        
     </div>
         </Link>
     )

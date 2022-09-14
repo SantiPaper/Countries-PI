@@ -5,6 +5,7 @@ import s from "./searchBar.module.css"
 
 
 
+
 export default function SearchBar(){
 
     const [search, setSearch] = useState("")
@@ -14,13 +15,13 @@ export default function SearchBar(){
     function onSubmit(e){
      e.preventDefault();
      dispatch(searchCountries(search))
+     setSearch("")
     }
 
 
-    function onInputChange(e){
-    
+     function onInputChange(e){
     setSearch(e.target.value)
-    }
+    } 
 
     
 
@@ -28,9 +29,9 @@ export default function SearchBar(){
      <div className={s.santi}>
       <div className={s.divHijo}>
         
-      <form className={s.bb} onSubmit={onSubmit}>
+      <form className={s.bb} onSubmit={onSubmit} >
         <input className={s.a} type="text" placeholder=" Buscar pais                 | 🔍" onChange ={onInputChange} value={search}/>
-        <input className={s.b} type="submit" value = "Buscar"/>
+        <input className={s.b} type="submit" value = "Buscar" />
       </form>
       
       </div>

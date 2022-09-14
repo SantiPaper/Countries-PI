@@ -26,14 +26,15 @@ export default function Homee() {
 
   const [currentPage, setCurrentPage] = useState(1);
   const [countriesPage] = useState(10);
-  const [, setOrdered] = useState("");
- 
-
-  const lastCountrie = currentPage * countriesPage; //10
-  const firstCountrie = lastCountrie - countriesPage; //   0
 
 
-  const currentCountries = allCountries.slice(firstCountrie, lastCountrie); // 0,1,2,3,4,5,6,7,8,9
+ /*  const [, setOrdered] = useState("");
+  */
+
+  const lastCountrie = currentPage * countriesPage; // 10-20 etc
+  const firstCountrie = lastCountrie - countriesPage; //   1-10 etc 
+
+  const currentCountries = allCountries.slice(firstCountrie, lastCountrie); 
 
   const paginado = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -44,20 +45,24 @@ export default function Homee() {
   if(currentCountries.length === 0) {
     return (
     <div>
-          <img src = "https://cdefis.edu.mx/wp-content/uploads/2022/06/Earth.gif" alt="Img"  />
+          <img className={s.loading} src = "https://acegif.com/wp-content/uploads/loading-25.gif" alt="Img"  />
+          <Link to="/home">
+          <button onClick={(c) =>  handleClick(c) } > Volver al inicio </button>
+        </Link>
     </div>)
   } 
 
   function handleClick(c) {
     c.preventDefault();
     dispatch(getCountries());
+    setCurrentPage(1)
   }
 
   return (
     
     <div>
       
-      <button onClick={(c) =>  handleClick(c) } className={s.refresh}> Volver a cargar paises </button>
+      <button  onClick={(c) =>  handleClick(c) } className={s.refresh}  > Volver a cargar paises </button>
       
       <div className={s.search}>
         <SearchBar className={s.busqueda} />
@@ -68,6 +73,8 @@ export default function Homee() {
           countriesPage={countriesPage}
           allCountries={allCountries.length}
           paginado={paginado}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
         />
       </div>
 
@@ -84,7 +91,7 @@ export default function Homee() {
 
       <div className={s.ordenes}>
       <FilterActivities  setCurrentPage={setCurrentPage} />
-      <Ordened setCurrentPage={setCurrentPage} setOrdered={setOrdered}/>
+      <Ordened setCurrentPage={setCurrentPage}/>
       
       </div>
 

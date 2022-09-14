@@ -4,7 +4,6 @@ import { ORDER_COUNTRIES } from "./actions"
 import { ORDER_POPULATION } from "./actions"
 import { FILTERED_CONTINENT } from "./actions"
 import { GET_COUNTRY_BY_ID } from "./actions"
-import { CLEAR_DETAIL } from "./actions"
 import { CREATE_ACTIVITY } from "./actions"
 import { GET_ALL_ACTIVITIES } from "./actions"
 import { FILTER_BY_ACTIVITY } from "./actions"
@@ -92,29 +91,16 @@ export default function reducer(state = initialState, action) {
             };
 
 
-        case CLEAR_DETAIL:
-            return {
-                ...state,
-                countriesDetail: []
 
-            }
         case FILTER_BY_ACTIVITY:
             const countriesAct = state.countriesDetail;
-            console.log(state.activities, 'esto es del reducer')
-            let activityFiltered = action.payload === 'none' ?
+            let activityFiltered = (action.payload === 'none' ?
                 countriesAct :
-                countriesAct.filter((act) => act.activities && act.activities.map((e) => e.name).includes(action.payload))
-            // // console.log(activityFiltered,'activity filtered')
-            // const activity = state.activities;
-            // const activityFiltered = action.payload === 'none' ?
-            // activity : activity.forEach(act => console.log(act,'esto papaaa dale que sale'))
-
+                countriesAct.filter((e) => e.activities && e.activities.map((e) => e.name).includes(action.payload)))
             return {
                 ...state,
                 countries: activityFiltered
             }
-
-
         default: return state
     }
 }

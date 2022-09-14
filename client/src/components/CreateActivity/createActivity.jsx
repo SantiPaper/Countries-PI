@@ -13,8 +13,8 @@ function validateInput(input) {
   error.name = "Falta asignar nombre a la actividad"
  }else if (input.name.length > 20){
   error.name = "El nombre es demasiado largo, intentelo denuevo"
- }else if(/[0-9]/.test(input.name)){
-  error.name = "No se permiten numeros en el nombre de la actividad"
+ }else if(/[@=$%+"&|<>#0-9]/.test(input.name)){
+  error.name = "No se permiten numeros ni simbolos en el nombre de la actividad"
  }
  if(!input.difficulty[0]){
    error.difficulty = "Tiene que seleccionar una dificultad"
@@ -35,11 +35,11 @@ if(!input.countries[0]){
   error.countries = "Se debe seleccionar al menos un pais para asignar la actividad"
 }
 
-
-
 return error
 
 }
+
+
 
 
 
@@ -54,7 +54,7 @@ return error
     difficulty: "",
     duration: "",
     season: "",
-    countries: [],
+    countries: [] ,
   });
 
   const [error, setError] = useState({});
@@ -79,7 +79,7 @@ return error
     });
  
     
-    /* setError(validateInput({...input,[e.target.name]: e.target.value})) */
+    
     
   }
 
@@ -90,7 +90,7 @@ return error
         [e.target.name]: e.target.value,
       });
     }
-    /* setError(validateInput({...input,[e.target.name]: e.target.value})) */
+    
    
     
   }
@@ -102,7 +102,7 @@ return error
       countries: input.countries.includes(e.target.value) ? input.countries : [...input.countries, e.target.value]
     });
 
-    setError(validateInput({...input,[e.target.name]: e.target.value}))
+    
     ;
     
   }
@@ -150,13 +150,16 @@ return error
     });
   }
 
+  
+
+
 
   return (
     <div className={s.background}>
 
        
         <Link to="/home">
-          <button className={s.buton} > Home 🏠</button>
+          <button className={s.buton} > Volver al inicio 🏠</button>
         </Link>
       
 
@@ -208,7 +211,6 @@ return error
           <label className={s.name}>Duracion en minutos</label>
           <input className={s.minutos}
             type="number"
-            
             value={input.duration}
             name="duration"
             placeholder="Min 20 - Max 300"
@@ -223,8 +225,8 @@ return error
           <label className={s.nameTemp}>Temporada</label>
           <div  className={s.backgroundDif}>
             <label  className={s.margin}>
-              <input
-                type="radio"
+              <input 
+                 type="radio"
                 name="season"
                 value="Verano"
                 onChange={(e) => handleCheck(e)}
@@ -234,7 +236,7 @@ return error
             </label>
             <label className={s.margin}>
               <input
-                type="radio"
+                 type="radio"
                 name="season"
                 value="Otoño"
                 onChange={(e) => handleCheck(e)}
@@ -253,7 +255,7 @@ return error
             </label>
             <label className={s.margin}>
               <input 
-                type="radio"
+                 type="radio"
                 name="season"
                 value="Primavera"
                 onChange={(e) => handleCheck(e)}
@@ -293,16 +295,6 @@ return error
             
 
             <button className={s.boton} 
-             /* disabled={input.name === "" ||
-             error.name ||
-             input.difficulty === "" ||
-             error.difficulty ||
-             input.duration === "" ||
-             error.duration ||
-             input.season === "" ||
-             error.season ||
-             input.countries[0] === "" ||
-             error.countries } */
             type="submit"
              >Crear actividad</button>
           </div>

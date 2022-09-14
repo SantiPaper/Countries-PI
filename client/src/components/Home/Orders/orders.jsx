@@ -27,8 +27,8 @@ export default function Ordened({ setCurrentPage}) {
     
     <select  className={s.select2} name="select" onChange={onSelectChangee}>
       <option hidden={true} >Ordenes poblacion</option>
-      <option className={s.radius} value="low">Lower</option>
-      <option className={s.radius} value="top">Higher</option>
+      <option className={s.radius} value="low">Ascendente</option>
+      <option className={s.radius} value="top">Descendente</option>
     </select>
    
     </div>

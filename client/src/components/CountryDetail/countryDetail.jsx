@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { getCountryById, clearDetail } from "../../redux/actions";
+import { getCountryById } from "../../redux/actions";
 import { useEffect } from "react";
 import s from "./countryDetail.module.css";
 
@@ -17,7 +17,7 @@ export default function DetailCountries() {
   if (detailCountry.length > 2 || detailCountry.length < 1) {
     return (
       <div >
-        <img className={s.cargando} src="https://raw.githubusercontent.com/gist/brudnak/aba00c9a1c92d226f68e8ad8ba1e0a40/raw/e1e4a92f6072d15014f19aa8903d24a1ac0c41a4/nyan-cat.gif" alt="Img" />
+        <img className={s.cargando} src="https://acegif.com/wp-content/uploads/loading-25.gif" alt="Img" />
         <Link to="/home">
           <button className={s.refresh}> Volver al inicio</button>
         </Link>
@@ -51,12 +51,12 @@ export default function DetailCountries() {
             <div className={s.left}>
               <div className={s.details}>
                 
-                <p>Capital: {detailCountry.capital}</p>
-                <p>Continente:{detailCountry.continent}</p>
-                <p>Poblacion: {detailCountry.population}</p>
-                <p>Subregion: {detailCountry.subregion}</p>
-                <p>Area: {detailCountry.area}</p>
-                <p>Codigo: {detailCountry.idApi}</p>
+                <p>Capital    :    {detailCountry.capital}</p>
+                <p>Continente    :    {detailCountry.continent}</p>
+                <p>Poblacion    :     {detailCountry.population}</p>
+                <p>Subregion    :     {detailCountry.subregion}</p>
+                <p>Area    :     {detailCountry.area}</p>
+                <p>Codigo    :     {detailCountry.idApi}</p>
               </div>
             </div>
           </div>
@@ -68,21 +68,21 @@ export default function DetailCountries() {
           </div>
           <div className={s.boxDescription}>
             {detailCountry.activities.length ? (
-              detailCountry.activities.map((activity) => {
+              detailCountry.activities.map((e) => {
                 return ( 
-                    <div className={s.description}>
+                    <div key={e.name} className={s.description}>
                     <p className={s.activityStuf}>
                       {" "}
-                      {activity.name.toUpperCase()}
+                      {e.name.toUpperCase()}
                     </p>
                     <p className={s.activityStuf}>
-                      Dificultad: {activity.difficulty}
+                      Dificultad: {e.difficulty}
                     </p>
                     <p className={s.activityStuf}>
-                      Duracion: {activity.duration}
+                      Duracion: {e.duration}
                     </p>
                     <p className={s.activityStuf}>
-                      Temporada: {activity.season}
+                      Temporada: {e.season}
                     </p>
             </div>
             
@@ -100,30 +100,3 @@ export default function DetailCountries() {
         );
 }
 
-{
-  /* <div className={s.activities}>
-<div className={s.nameOfActivities}>
-<h2>Actividades turisticas ⛷️</h2>
-</div>
-<div className={s.boxDescription}>
-{detailCountry.activities ? (
- detailCountry.activities.map((activity) => {
-   return (
-     <div className={s.description}>
-       <p className={s.activityStuf}> {activity.name.toUpperCase()}</p>
-       <p className={s.activityStuf}>Dificultad: {activity.difficulty}</p>
-       <p className={s.activityStuf}>Duracion: {activity.duration}</p>
-       <p className={s.activityStuf}>Temporada: {activity.season}</p>
-     </div>
-   );
- })
-) : (
- <>
-   <h2>No hay actividades</h2>
-  
- </>
-)}
-
-</div>
-</div> */
-}

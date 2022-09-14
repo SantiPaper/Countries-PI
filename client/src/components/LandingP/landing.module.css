@@ -25,12 +25,12 @@ body {
     letter-spacing: 0.25rem;
     word-spacing: 0.25rem;
     text-shadow: 3px 3px 2px rgb(33, 32, 34);
-    color:#93a6cf
+    color:#d8dde7
 }
 
 .boton {
-    position: relative;
-    bottom: 9.5rem;
+    /* position: relative;
+    bottom: 9.5rem; */
     min-width: 200px;
     height: 60px;
     color: #fff;
@@ -39,21 +39,23 @@ body {
     transition: all 0.3s ease;
     display: inline-block;
     border-radius: 20px;
-    border: 2px solid #e1e4e6;
-    background: #93a6cf;
+    border: 2px solid #0707075f;
+    background-color: rgb(16, 16, 16);
     font-size: 20px;
+    
   }
   .boton:hover {
     background: #fff;
     color: #000000;
-    font-size: 18px;
-    border: 2px solid #000000;
+    font-size: 21px;
+    border: 2px solid #0707075f;
   }
 
   .containerBoton{
     display: flex;
     justify-content: center;
-    padding-top: 200px;
+    padding-top: 50px;
+    align-items: center;
   }
 
   .img{

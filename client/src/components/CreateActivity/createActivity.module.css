@@ -23,6 +23,8 @@
     color: white;
     border: 1.3px solid rgba(142, 178, 80, 0.223);
     cursor: pointer;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 
@@ -163,6 +165,7 @@
     background-color: rgba(75, 81, 75, 0.579);
     border: 1px black solid;    
     color: white;
+    text-align: center;
     
 }
 

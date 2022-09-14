@@ -13,21 +13,9 @@ export const SET_CURRENT_PAGE = "SET_CURRENT_PAGE"
 
 
 
-/* export function getCountries() {
-    return function (dispatch) {
-        axios.get("http://localhost:3001/api/countries")
-            .then((e) => {
-                dispatch({
-                    type: GET_COUNTRIES,
-                    payload: e.data
-                })
-            }).then((error) => {
-                console.log(error);
-            })
 
-    }
-}
- */
+
+
 export const getCountries = () => {
     return async (dispatch) => {
         try {
@@ -42,19 +30,7 @@ export const getCountries = () => {
     }
 }
 
-/* export function searchCountries(e) {
-    return function (dispatch) {
-        axios.get("http://localhost:3001/api/countries?name=" + e)
-            .then(e => {
-                dispatch({
-                    type: SEARCH_COUNTRIES,
-                    payload: e.data
-                })
-            }).then(error => {
-                console.log(error);
-            })
-    }
-} */
+
 
 export const searchCountries = (e) => {
     return async (dispatch) => {
@@ -69,6 +45,8 @@ export const searchCountries = (e) => {
         }
     }
 }
+
+
 
 export const orderCountries = (payload) => {
     return {
@@ -90,22 +68,7 @@ export const filteredContinent = (payload) => {
     };
 };
 
-/* export const  getCountryById = (e)  => {
-    return function (dispatch) {
-        axios.get(`http://localhost:3001/api/countries/${e}`)
-            .then((e) => {
-                dispatch({
-                    type: GET_COUNTRY_BY_ID,
-                    payload: e.data,
-                });
-            })
-            .catch((error) => {
-                console.log(error)
 
-                return dispatch({ type: GET_COUNTRIES, payload: [] })
-            })
-    };
-} */
 
 export const getCountryById = (e) => {
     return async (dispatch) => {
@@ -121,18 +84,7 @@ export const getCountryById = (e) => {
     }
 }
 
-/* export const getActivities = () => async (dispatch) => {
-    try {
-        const acts = await axios
-            .get(`http://localhost:3001/api/activity/`);
-        dispatch({
-            type: GET_ALL_ACTIVITIES,
-            payload: acts.data,
-        });
-    } catch (error) {
-        console.log(error);
-    }
-}; */
+
 
 export const getActivities = () => {
     return async (dispatch) => {
@@ -148,15 +100,7 @@ export const getActivities = () => {
     }
 }
 
-/* export const postActivity = (payload) => {
-    return async (dispatch) => {
-        let postAct = await axios.post(`http://localhost:3001/api/activity`, payload)
-        return dispatch({
-            type: CREATE_ACTIVITY,
-            payload: postAct
-        })
-    }
-} */
+
 
 export const postActivity = (payload) => {
     return (dispatch) => {
@@ -179,9 +123,4 @@ export const filterActivity = (payload) => {
 }
 
 
-export const clearDetail = () => (dispatch) => {
-    dispatch({
-        type: CLEAR_DETAIL
-    })
-}
 
