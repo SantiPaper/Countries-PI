@@ -10,7 +10,6 @@ body{
     display: flex;
     justify-content: center;
     text-decoration: none;
-    
 }
 
 .ordenes{
@@ -107,5 +106,66 @@ border: 1px rgba(247, 240, 229, 0.244) solid;
 }
 
 .loading{
-    margin-top: 250px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+}
+
+.div_loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxLoading{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 130px;
+    width: 500px;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.493);
+    border-radius: 7px;
+}
+
+
+.cargandoPaises{
+    color: rgba(223, 215, 215, 0.849);;
+    width: 500px;
+    height: 70px;
+    font-size: 50px;
+    
+    
+}
+
+
+.divBotton{
+    display: flex;
+    justify-content: left;
+    margin-top: 40px;
+    margin-left: 150px;
+}
+
+
+.botonLoading{
+    display: inline-block;
+    justify-content: center;
+    width: 120px;
+    height: 40px;
+    align-items: center;
+    text-decoration: none;
+    background-color: rgba(158, 154, 154, 0.849);
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 7px;
+    transition:all .1s ease-in-out ;
+}
+
+.botonLoading:hover{
+    color: rgb(248, 245, 245);
+
 }

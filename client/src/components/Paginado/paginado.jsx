@@ -2,7 +2,7 @@ import React from "react";
 import s from "./paginado.module.css"
 
 
-const Paginate = ({ countriesPage, allCountries, paginado, setCurrentPage, currentPage }) => {
+const Paginate = ({ countriesPage, allCountries, paginado, setCurrentPage, currentPage,firstCountryPage }) => {
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(allCountries / countriesPage); i++) {

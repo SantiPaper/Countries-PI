@@ -13,7 +13,7 @@ function validateInput(input) {
   error.name = "Falta asignar nombre a la actividad"
  }else if (input.name.length > 20){
   error.name = "El nombre es demasiado largo, intentelo denuevo"
- }else if(/[@=$%+"&|<>#0-9]/.test(input.name)){
+ }else if(/[@=$%+"&|< >#0-9]/.test(input.name)){
   error.name = "No se permiten numeros ni simbolos en el nombre de la actividad"
  }
  if(!input.difficulty[0]){

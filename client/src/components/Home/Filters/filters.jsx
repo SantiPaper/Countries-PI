@@ -19,7 +19,6 @@ const FilterActivities = ({setCurrentPage}) => {
     } 
 
     function handleFilteredContinent(e) {
-        dispatch(filteredContinent(e.target.value));
          console.log(e.target.value);
          setCurrentPage(1)
       } 

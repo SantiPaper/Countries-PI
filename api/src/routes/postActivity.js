@@ -2,7 +2,7 @@ const { Router } = require("express");
 const { Activity, Country } = require("../db")
 const router = Router();
 
-router.post('/', async (req, res, next) => {
+router.post('/', async (req, res) => {
     const { name, difficulty, duration, season, countries } = req.body;
     try {
         if (name && difficulty && duration && season) {

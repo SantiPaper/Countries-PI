@@ -98,11 +98,5 @@ router.get("/:id", async (req, res) => {
 });
 
 
-//ruta get que al inicializarse ya carga la funcion de apiGetData, luego si fue invocada por query
-//o no lo evalua dentro y muestra el pais solicitado por query o los que coincidan con esos datos
-//ingresados por URL, y si no ingreso nada por query directamente nos trae todos los paises de la
-//api a nuestra DB y nos los muestra, con sus respectivas actividades
-
-
 
 module.exports = router;

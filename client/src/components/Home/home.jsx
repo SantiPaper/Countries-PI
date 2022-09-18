@@ -25,16 +25,35 @@ export default function Homee() {
   
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [countriesPage] = useState(10);
+  
+  
+  
+  const [countriesPage ] = useState(10);
+  /* const [countriesPage2 ] = useState(9); */
 
 
- /*  const [, setOrdered] = useState("");
-  */
+  
 
+  
+  
+  
   const lastCountrie = currentPage * countriesPage; // 10-20 etc
-  const firstCountrie = lastCountrie - countriesPage; //   1-10 etc 
+  const firstCountrie = lastCountrie - countriesPage; //   1-10
+  
+  
+  
+  let currentCountries = allCountries.slice(firstCountrie, lastCountrie);
+   if(currentPage > 1){
+     currentCountries = allCountries.slice(firstCountrie, lastCountrie);
+   } else {
+     currentCountries = allCountries.slice(firstCountrie, 9);
+   }
 
-  const currentCountries = allCountries.slice(firstCountrie, lastCountrie); 
+
+
+      
+  
+  /* const currentCountries = allCountries.slice(firstCountrie, lastCountrie);  */
 
   const paginado = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -44,12 +63,21 @@ export default function Homee() {
 
   if(currentCountries.length === 0) {
     return (
-    <div>
-          <img className={s.loading} src = "https://acegif.com/wp-content/uploads/loading-25.gif" alt="Img"  />
+      <div>
+         
+            <div className={s.divBotton}>
           <Link to="/home">
-          <button onClick={(c) =>  handleClick(c) } > Volver al inicio </button>
+          <button className={s.botonLoading} onClick={(c) =>  handleClick(c) } > Recargar paises </button>
         </Link>
-    </div>)
+          </div>
+        <div className={s.boxLoading}>
+          <h1 className={s.cargandoPaises}>Cargando paises..</h1>
+        </div>
+          <div className={s.div_loading}>
+          <img className={s.loading} src = "https://www.superiorlawncareusa.com/wp-content/uploads/2020/05/loading-gif-png-5.gif" alt="Img"  />
+         </div>
+          </div>)
+
   } 
 
   function handleClick(c) {
