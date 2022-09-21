@@ -1,4 +1,6 @@
 import axios from "axios"
+import { Link } from "react-router-dom"
+import Loading from "../components/Loading/loading"
 export const GET_COUNTRIES = "GET_COUNTRIES"
 export const SEARCH_COUNTRIES = "SEARCH_COUNTRIES"
 export const ORDER_COUNTRIES = "ORDER_COUNTRIES"
@@ -41,7 +43,7 @@ export const searchCountries = (e) => {
                 payload: marto.data
             })
         } catch (error) {
-            alert("Pais no encontrado")
+            console.log(error);
         }
     }
 }

@@ -52,7 +52,7 @@ router.get("/", async (req, res) => {
             if (countryName.length > 0) {
                 res.status(200).send(countryName);
             } else {
-                res.status(404).send("Country not found");
+                res.status(200).send("Country not found");
 
             }
         } else {
@@ -68,7 +68,7 @@ router.get("/", async (req, res) => {
             return res.status(200).send(countries);
         }
     } catch (error) {
-        console.log(error);
+        /*  console.log(error); */
         return res.status(404).send(error);
     }
 });

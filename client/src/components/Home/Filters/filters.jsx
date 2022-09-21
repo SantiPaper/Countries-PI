@@ -8,6 +8,7 @@ import s from "./filters.module.css"
 const FilterActivities = ({setCurrentPage}) => {
     const dispatch = useDispatch();
     const activitiesCreate = useSelector((state) => state.activities)
+    
      
 
      
@@ -19,7 +20,8 @@ const FilterActivities = ({setCurrentPage}) => {
     } 
 
     function handleFilteredContinent(e) {
-         console.log(e.target.value);
+        e.preventDefault();
+         dispatch(filteredContinent(e.target.value));
          setCurrentPage(1)
       } 
 
@@ -31,12 +33,15 @@ const FilterActivities = ({setCurrentPage}) => {
                 <option  hidden={true} value='none'>Seleccione actividad</option>
                 {activitiesCreate && activitiesCreate.map(e => {
                     return (
-                        <option className={s.radius} key={e.id} value={e.name}>
+                        <div className={s.radius}>
+                        <option className={s.radius} key={e.name} value={e.name}>
                             {e} 
                             </option>
+                            </div>
                     )})}
             </select>
              
+            
                 <select className={s.select2} onChange={(e) => handleFilteredContinent(e)}>
                 <option className={s.radius} hidden={true} value="All">Todos</option>
                 <option className={s.radius} value="Americas">America</option>
@@ -46,6 +51,7 @@ const FilterActivities = ({setCurrentPage}) => {
                 <option className={s.radius} value="Oceania">Oceania</option>
                   <option className={s.radius} value="Antarctic">Antarctic</option>
                 </select>
+                
              
 
         </div>

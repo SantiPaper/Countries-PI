@@ -4,6 +4,9 @@ import { Link, useParams } from "react-router-dom";
 import { getCountryById } from "../../redux/actions";
 import { useEffect } from "react";
 import s from "./countryDetail.module.css";
+import Error from "../404Error/error";
+import loading from "../Loading/loading";
+import Loading from "../Loading/loading";
 
 export default function DetailCountries() {
   const dispatch = useDispatch();
@@ -14,21 +17,13 @@ export default function DetailCountries() {
     dispatch(getCountryById(idApi));
   }, []); 
   
-  if (detailCountry.length > 2 || detailCountry.length < 1) {
-    return (
-      <div >
-        <img className={s.cargando} src="https://acegif.com/wp-content/uploads/loading-25.gif" alt="Img" />
-        <Link to="/home">
-          <button className={s.refresh}> Volver al inicio</button>
-        </Link>
-      </div>
-    );
-  }
+  
 
-  return (
+  if(idApi === detailCountry.idApi){
+    return(
     <div className={s.fondo}>
       <div className={s.backToHome}>
-      <Link to="/home">
+      <Link to="/">
           <button className={s.boton}> </button>
         </Link>
       </div>
@@ -98,5 +93,11 @@ export default function DetailCountries() {
         </div>
         </div>
         );
+} else{
+  return (
+    <Loading/>
+  )
 }
 
+
+}

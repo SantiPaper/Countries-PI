@@ -158,7 +158,7 @@ return error
     <div className={s.background}>
 
        
-        <Link to="/home">
+        <Link to="/">
           <button className={s.buton} > Volver al inicio 🏠</button>
         </Link>
       

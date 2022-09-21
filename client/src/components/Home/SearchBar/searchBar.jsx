@@ -6,7 +6,7 @@ import s from "./searchBar.module.css"
 
 
 
-export default function SearchBar(){
+export default function SearchBar({setCurrentPage,currentPage}){
 
     const [search, setSearch] = useState("")
 
@@ -16,6 +16,9 @@ export default function SearchBar(){
      e.preventDefault();
      dispatch(searchCountries(search))
      setSearch("")
+     if(currentPage){
+     setCurrentPage(1)
+    }
     }
 
 
