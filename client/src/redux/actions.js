@@ -21,7 +21,7 @@ export const SET_CURRENT_PAGE = "SET_CURRENT_PAGE"
 export const getCountries = () => {
     return async (dispatch) => {
         try {
-            const marto = await axios.get("http://localhost:3001/api/countries")
+            const marto = await axios.get("/countries")
             dispatch({
                 type: GET_COUNTRIES,
                 payload: marto.data
@@ -37,7 +37,7 @@ export const getCountries = () => {
 export const searchCountries = (e) => {
     return async (dispatch) => {
         try {
-            const marto = await axios.get("http://localhost:3001/api/countries?name=" + e)
+            const marto = await axios.get("/countries?name=" + e)
             return dispatch({
                 type: SEARCH_COUNTRIES,
                 payload: marto.data
@@ -47,6 +47,20 @@ export const searchCountries = (e) => {
         }
     }
 }
+
+/* export const searchCountries = (e) => {
+    return async (dispatch) => {
+        try {
+            const marto = await axios.get("http://localhost:3001/api/countries?name=" + e)
+            return dispatch({
+                type: SEARCH_COUNTRIES,
+                payload: marto.data
+            })
+        } catch (error) {
+            console.log(error);
+        }
+    }
+} */
 
 
 
@@ -75,7 +89,7 @@ export const filteredContinent = (payload) => {
 export const getCountryById = (e) => {
     return async (dispatch) => {
         try {
-            const country = await axios.get(`http://localhost:3001/api/countries/${e}`)
+            const country = await axios.get(`/countries/${e}`)
             return dispatch({
                 type: GET_COUNTRY_BY_ID,
                 payload: country.data,
@@ -91,7 +105,7 @@ export const getCountryById = (e) => {
 export const getActivities = () => {
     return async (dispatch) => {
         try {
-            const seba = await axios.get(`http://localhost:3001/api/activity/`)
+            const seba = await axios.get(`/activity/`)
             return dispatch({
                 type: GET_ALL_ACTIVITIES,
                 payload: seba.data,
@@ -106,7 +120,7 @@ export const getActivities = () => {
 
 export const postActivity = (payload) => {
     return (dispatch) => {
-        axios.post(`http://localhost:3001/api/activity`, payload)
+        axios.post(`/activity`, payload)
             .then(e => {
                 dispatch({
                     type: CREATE_ACTIVITY,
