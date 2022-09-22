@@ -7,7 +7,7 @@ return(
         <div className={s.box}>
             <div className={s.boxMedida}>
             <div className={s.boxName}>
-            <h1 className={s.name}>Tecnologias utilizadas</h1>
+            <h1 className={s.name}>TECNOLOGIAS</h1>
             </div>
 
             <div className={s.tecnologies}>
@@ -20,7 +20,7 @@ return(
             </div>
         <div className={s.boxeo}>
         <div className={s.boxName}>
-            <h1 className={s.name}>Contacto</h1>
+            <h1 className={s.name}>CONTACTO</h1>
         </div>
             <div className={s.tecnologies}>
                 <a className={s.padding} href="https://www.linkedin.com/in/santiagovitelli/">

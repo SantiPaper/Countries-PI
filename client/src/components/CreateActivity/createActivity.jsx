@@ -129,7 +129,7 @@ return error
       e.preventDefault();
       dispatch(postActivity(input));
       alert("Actividad creada con exito");
-      history.push("/home");
+      history.push("/");
       setInput({
         name: "",
         difficulty: "",

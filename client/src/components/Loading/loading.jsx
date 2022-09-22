@@ -29,10 +29,10 @@ useEffect(() => {
     <div className={s.fondo}>
       <div className={s.box}>
         <div className={s.contCreate}>
-        <Link to={"/"}> 
+        {/* <Link to={"/"}> 
           <button  onClick={(c) =>  handleClick(c) } className={s.refresh}  > Volver a cargar paises </button>
-          </Link>
-          <SearchBar/>
+          </Link> */}
+           <SearchBar/>
         </div>
         <h1 className={s.activityStuf}>{cargando}</h1>
         <img

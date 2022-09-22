@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import { searchCountries } from "../../../redux/actions";
 import { useState } from "react";
 import s from "./searchBar.module.css"
+import { Link } from "react-router-dom";
 
 
 
@@ -36,8 +37,14 @@ export default function SearchBar({setCurrentPage,currentPage}){
         <input className={s.a} type="text" placeholder=" Buscar pais                 | 🔍" onChange ={onInputChange} value={search}/>
         <input className={s.b} type="submit" value = "Buscar" />
       </form>
-      
+
       </div>
+      <div className={s.caca}>
+      <Link to={"/home/about"}>
+        <button className={s.buton}>About</button>
+        </Link> 
+        </div>
+      
     </div>
     )
 }

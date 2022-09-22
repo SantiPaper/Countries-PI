@@ -24,11 +24,9 @@ margin-right: 50px;
 }
 
 .radius{
-    border-radius: 9px;
-    background-color: rgba(35, 35, 35, 0);
-    max-width: 150px;
-    border: 0px solid wheat;
-    padding: 0px;
+   
+    max-width: 100px;
+    
  }
 
  .radius:hover{

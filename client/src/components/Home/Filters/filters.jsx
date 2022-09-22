@@ -33,11 +33,9 @@ const FilterActivities = ({setCurrentPage}) => {
                 <option  hidden={true} value='none'>Seleccione actividad</option>
                 {activitiesCreate && activitiesCreate.map(e => {
                     return (
-                        <div className={s.radius}>
-                        <option className={s.radius} key={e.name} value={e.name}>
+                        <option  className={s.radius} key={e.id} value={e.name}>
                             {e} 
                             </option>
-                            </div>
                     )})}
             </select>
              

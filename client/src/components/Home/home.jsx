@@ -20,7 +20,8 @@ export default function Homee() {
   const { name } = useParams();
 
   const allCountries = useSelector((state) => state.countries);
-  const countrieDetail = useSelector((state) => state.countriesDetail);
+  const allActivities = useSelector((state) => state.activities)
+  
 
 
   
@@ -30,6 +31,7 @@ export default function Homee() {
   }, []);        
 
   
+ 
 
   const [currentPage, setCurrentPage] = useState(1);
   
@@ -115,11 +117,11 @@ if(typeof(allCountries) === "string"){
         <SearchBar 
          currentPage={currentPage}
         setCurrentPage={setCurrentPage} />
-        <div className={s.diosMio}>
-          <Link to={"/home/about"}>
+        
+         {/*  <Link to={"/home/about"}>
         <button className={s.buton}>About</button>
-        </Link>
-        </div>
+        </Link> */}
+        
       </div> : null}
       
 
