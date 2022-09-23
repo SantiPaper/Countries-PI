@@ -1,6 +1,5 @@
 .background{
     display: flex;
-    justify-content: center;
     align-items: center;
     background-image: url(./1580.jpg);
     height: 937px;
@@ -11,21 +10,66 @@
     color: white
 }
 
+.ve{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 20%;
+    height: 100%;
+
+}
+
+.och{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 16rem;
+    width: 80%;
+    height: 100%;
+}
+
 .buton{
-    position: absolute;
-    top : 100px;
-    left: 230px;
-    width: 200px;
+    width: 12.5rem;
     height: 40px;
     border-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(75, 81, 75, 0.579);
-    color: white;
+    background-color: rgb(221, 223, 221);
+    color: rgb(0, 0, 0);
     border: 1.3px solid rgba(142, 178, 80, 0.223);
     cursor: pointer;
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.5s ease-in-out;
+    
 }
+
+.boton{
+    width: 7.5rem;
+    height: 40px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(3, 3, 3, 0.377);
+    color: rgb(255, 255, 255);
+    border: 1.3px solid rgba(142, 178, 80, 0.223);
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.5s ease-in-out;
+    
+    
+}
+
+.boton:hover{
+    background-color: green;
+}
+
+.buton:hover{
+    transform: scale(1.1);
+}
+
+
 
 
 
@@ -33,7 +77,7 @@
 .BoxGral{
     transition: all 0.5s ease-in-out; 
     display: flex;
-    width: 40%;
+    width: 48rem;
     background-color: rgba(0, 0, 0, 0.771);
     height:91.8%;
     flex-direction: column;
@@ -66,14 +110,26 @@
 
 .place{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: top;
     margin-top: 30px;
     margin-bottom: 30px;
     min-height: 100px;
-    width: 400px;
+    width: 100%;
     
+}
+
+.placeone{
+    width: 30%;
+}
+
+.placetwo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
 }
 
 .name{
@@ -219,23 +275,7 @@
     width: 100%;
 }
 
-.boton{
-    position: absolute;
-    top: 155px;
-    left: 670px;
-    background-color: rgba(75, 81, 75, 0.579);
-    color: white;
-    height: 30px;
-    border-radius: 9px;
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
-    
-}
 
-.boton:hover{
-    
-    transform: scale(1.1);
-}
 
 .divCountries{
     margin-top: 0px;

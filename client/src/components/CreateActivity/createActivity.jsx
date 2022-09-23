@@ -157,12 +157,15 @@ return error
   return (
     <div className={s.background}>
 
-       
+       <div className={s.ve}>
         <Link to="/">
           <button className={s.buton} > Volver al inicio 🏠</button>
         </Link>
-      
 
+        
+        </div>
+      
+<div className={s.och}>
       <div className={s.BoxGral}>
       <div className={s.create}>
       <h1 >CREAR ACTIVIDAD</h1>
@@ -170,6 +173,12 @@ return error
       <div className={s.alimentacion}>
       <form className={s.form} onSubmit={(e) => handleSubmit(e)} autoComplete="off" >
         <div className={s.place}>
+          <div className={s.placeone}>
+        <button className={s.boton} 
+            type="submit"
+             >Crear actividad</button>
+             </div>
+             <div className={s.placetwo}>
           <label className={s.name}>Nombre de la actividad</label>
           <input className={s.nameActivity}
             type="text"
@@ -181,6 +190,7 @@ return error
            <div className={s.error}>
            {error.name && <p className={s.pName}>{error.name}</p>}
            </div>
+        </div>
         </div>
 
           <div className={s.boxDifficulty}>
@@ -294,9 +304,9 @@ return error
             ))} </div>
             
 
-            <button className={s.boton} 
+            {/* <button className={s.boton} 
             type="submit"
-             >Crear actividad</button>
+             >Crear actividad</button> */}
           </div>
           <div className={s.error}>
           {error.countries && <p>{error.countries}</p>}
@@ -309,6 +319,7 @@ return error
       </div>
 
       
+      </div>
       </div>
     </div>
   );

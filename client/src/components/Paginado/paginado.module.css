@@ -9,6 +9,12 @@
     
 }
 
+.navi{
+    display: flex;
+    justify-content: center;
+    width: 84.375rem;
+}
+
 .button{
     display: flex;
     justify-content: center;
@@ -22,7 +28,7 @@
     border: 0px;
     border-left: 0.5px rgba(119, 118, 118, 0.232) solid;
     border-right: 0.5px rgba(109, 107, 107, 0.263) solid;
-    font-size: 16px;
+    font-size: 1rem;
     background-color: rgb(9, 9, 9);
     padding: 0px;
     margin: 0px;
@@ -46,9 +52,9 @@
     transition: all 0.5s;
     height: 50%;
     border: 0px;
-    border-left: 0.5px rgba(119, 118, 118, 0.232) solid;
-    border-right: 0.5px rgba(109, 107, 107, 0.263) solid;
-    font-size: 16px;
+    /* border-left: 0.5px rgba(119, 118, 118, 0.232) solid;
+    border-right: 0.5px rgba(109, 107, 107, 0.263) solid; */
+    font-size: 1.13;
     background-color: rgb(9, 9, 9);
     padding: 0px;
     margin: 0px;
@@ -61,7 +67,7 @@
     align-items: center;
     justify-content: center;
     background-color: rgb(9, 9, 9);
-    width: 1350px;
+    width: 84.375rem;
     border-radius: 20px;
     height: 30px;
     margin-bottom: 15px;
@@ -69,10 +75,11 @@
 }
 
 .nav{
-    margin-left: 20px;
-    margin-right: 20px;
+    display: flex;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
     border: grey 1px solid;
-    font-size: 13px;
+    font-size: 0.813rem;
     background-color: rgb(9, 9, 9);
     color: white;
     cursor: pointer;
@@ -82,4 +89,9 @@
 .nav:hover{
     color: rgb(31, 24, 24);
     
+}
+.gral{
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }

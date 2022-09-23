@@ -35,8 +35,9 @@ const Paginate = ({ countriesPage, allCountries, paginado, setCurrentPage, curre
   }
 
   return (
+    <div className={s.gral}>
     <div className={s.bordeP}>
-    <nav >
+    <nav className={s.navi} >
       <ul className={s.ul} >
       <button  className={s.nav}  onClick={(e) => restar(e)} >🡸</button>
         {pageNumbers.map((e) => (
@@ -47,6 +48,7 @@ const Paginate = ({ countriesPage, allCountries, paginado, setCurrentPage, curre
         <button  className={s.nav}  onClick={(e)=> sumar(e)} >🡺</button>
       </ul>
     </nav>
+    </div>
     </div>
 
   );
