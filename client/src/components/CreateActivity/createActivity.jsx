@@ -159,7 +159,7 @@ return error
 
        <div className={s.ve}>
         <Link to="/">
-          <button className={s.buton} > Volver al inicio 🏠</button>
+          <button className={s.buton} > </button>
         </Link>
 
         
