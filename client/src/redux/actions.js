@@ -21,7 +21,7 @@ export const SET_CURRENT_PAGE = "SET_CURRENT_PAGE"
 export const getCountries = () => {
     return async (dispatch) => {
         try {
-            const marto = await axios.get("/countries")
+            const marto = await axios.get("/api/countries")
             dispatch({
                 type: GET_COUNTRIES,
                 payload: marto.data
