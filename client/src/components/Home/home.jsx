@@ -113,7 +113,7 @@ if(typeof(allCountries) === "string"){
       
       <button  onClick={(c) =>  handleClick(c) } className={s.refresh}  > Volver a cargar paises </button>
       {searchi() ?
-      <div className={s.divGeneral} >
+      <div /* className={s.divGeneral} */ >
         <SearchBar 
          currentPage={currentPage}
         setCurrentPage={setCurrentPage} />
