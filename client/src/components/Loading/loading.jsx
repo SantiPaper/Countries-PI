@@ -17,7 +17,7 @@ useEffect(() => {
     setTimeout(() => {
         setCargando("Busqueda no encontrada :(");
         setImg("https://i.pinimg.com/originals/fb/ed/b2/fbedb25b550829b8b4c4984b45992b39.gif");
-    }, 3000);
+    }, 5500);
   }, []);
 
   

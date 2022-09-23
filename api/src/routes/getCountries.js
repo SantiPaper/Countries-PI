@@ -39,7 +39,7 @@ const apiGetData = async () => {
 };
 
 router.get("/", async (req, res) => {
-    await apiGetData();
+
     const { name } = req.query;
     try {
         if (name) {
@@ -75,7 +75,7 @@ router.get("/", async (req, res) => {
 
 
 router.get("/:id", async (req, res) => {
-    await apiGetData();
+
     const { id } = req.params;
     try {
         const idCountry = await Country.findOne({
