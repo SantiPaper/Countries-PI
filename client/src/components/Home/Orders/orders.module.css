@@ -29,7 +29,7 @@ body::-webkit-scrollbar-thumb{
     color: white;
     border: 0px solid white;
     text-align: center;
-    border-radius: 3px;
+    
     
     
 }
@@ -40,7 +40,7 @@ body::-webkit-scrollbar-thumb{
 }
 
 .radius{
-   border-radius: 9px;
+   
    background-color: rgb(35, 35, 35);
 }
 
@@ -58,7 +58,7 @@ body::-webkit-scrollbar-thumb{
     color: white;
     border: 0px solid white;
     text-align: center;
-    border-radius: 3px;
+   
     
     
 }
