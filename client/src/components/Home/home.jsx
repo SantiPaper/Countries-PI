@@ -157,7 +157,7 @@ if(typeof(allCountries) === "string"){
         <div>
           
         </div> 
-        {searchi() ?
+        {currentCountries ?
       currentCountries.map((e) => {
             return (
               <Country
