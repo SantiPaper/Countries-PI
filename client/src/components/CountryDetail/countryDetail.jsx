@@ -17,7 +17,7 @@ export default function DetailCountries() {
     dispatch(getCountryById(idApi));
   }, []); 
   
-  
+  console.log(detailCountry );
 
   if(idApi === detailCountry.idApi){
     return(

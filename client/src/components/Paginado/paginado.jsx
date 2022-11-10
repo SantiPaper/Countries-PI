@@ -19,7 +19,7 @@ const Paginate = ({ countriesPage, allCountries, paginado, setCurrentPage, curre
   }
   }
 
-  const restar = () => {
+  const restar = () => { 
     if( currentPage === 1){
       return
     }else{
